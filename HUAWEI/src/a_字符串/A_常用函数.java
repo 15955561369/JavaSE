@@ -26,6 +26,7 @@ public class A_常用函数 {
         System.out.println("ASdfgGD".toLowerCase());
         System.out.println("ASdfgGD".toUpperCase());
 
+
     }
 
 }
