@@ -25,6 +25,7 @@ public class A_常用函数 {
         //11.str,toLowerCase()将str全部转为小写
         System.out.println("ASdfgGD".toLowerCase());
         System.out.println("ASdfgGD".toUpperCase());
+
     }
 
 }
