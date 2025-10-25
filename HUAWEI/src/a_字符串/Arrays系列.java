@@ -35,7 +35,6 @@ public class Arrays系列 {
         int []num2=Arrays.copyOfRange(nums,1,3);
         System.out.println(Arrays.toString(num2));
 
-
     }
 
 }
