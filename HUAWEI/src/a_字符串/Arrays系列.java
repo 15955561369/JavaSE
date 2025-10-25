@@ -34,6 +34,7 @@ public class Arrays系列 {
         //9.数组切片:Arrays.copyOfRange(Original,1,3),左闭右开
         int []num2=Arrays.copyOfRange(nums,1,3);
         System.out.println(Arrays.toString(num2));
+
     }
 
 }
