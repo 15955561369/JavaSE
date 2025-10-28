@@ -1,4 +1,4 @@
-package b_模拟;
+package 模拟;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package a_字符串;
+package 字符串;
 import java.util.*;
 
 /**

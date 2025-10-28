@@ -1,19 +1,20 @@
-package a_字符串;
+package Arrays方法系列;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Arrays系列 {
+public class Main {
     public static void main(String[] args) {
         String []str={"AaA","AaA","AAA","BBCC"};
         //1.排序:Arrays.sort(str)用字典序排序数组
         Arrays.sort(str);
         System.out.println(Arrays.toString(str));
         //2.倒序:Arrays.sort(str,Collections.reverseOrder())
-        Arrays.sort(str,Collections.reverseOrder());
+        Arrays.sort(str, Collections.reverseOrder());
         System.out.println(Arrays.toString(str));
         //3.长度排序:Arrays.sort(str,Comparator.comparingInt(String::length))用字符串长度排序
-        Arrays.sort(str,Comparator.comparingInt(String::length));
+        Arrays.sort(str, Comparator.comparingInt(String::length));
         System.out.println(Arrays.toString(str));
         //4.二分查找索引(必须先排序):Arrays.binarySearch(nums,8)
         Arrays.sort(str);
@@ -36,5 +37,4 @@ public class Arrays系列 {
         System.out.println(Arrays.toString(num2));
 
     }
-
 }
