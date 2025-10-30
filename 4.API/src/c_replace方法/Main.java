@@ -1,4 +1,4 @@
-package e_replace方法;
+package c_replace方法;
 
 public class Main {
     public static void main(String[] args) {

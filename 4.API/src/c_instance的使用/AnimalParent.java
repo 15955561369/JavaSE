@@ -1,4 +1,4 @@
-package d_instance的使用;
+package c_instance的使用;
 
 public class AnimalParent {
     int age=20;

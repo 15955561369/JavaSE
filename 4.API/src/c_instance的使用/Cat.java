@@ -1,4 +1,4 @@
-package d_instance的使用;
+package c_instance的使用;
 
 /*
 * 对象 instance Class:返回 对象 是否是Class的实例,Class可以是自身类,父类

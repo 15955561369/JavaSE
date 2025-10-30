@@ -1,4 +1,4 @@
-package f_split方法;
+package c_split方法;
 
 public class Main {
     public static void main(String[] args) {

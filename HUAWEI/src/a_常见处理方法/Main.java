@@ -10,7 +10,7 @@ public class Main {
         System.out.println(str.toCharArray().length);
         System.out.println(str.length());
 
-        //3.以,隔开 返回String数组:str.split(",")
+        //3.str.split(",") 以,隔开 返回String数组
         String []strs=str.split("y");
         System.out.println(strs[0]+" "+strs[1]);
 
@@ -23,7 +23,7 @@ public class Main {
         //6.str.contains("xx") str是否包含子串"xx"
         System.out.println(str.contains("ws"));
 
-        //7.str.indexOf("xx",fromindex) 从fromindex查找子串"xx"的索引，若没有返回-1
+        //7.str.indexOf("xx",fromindex) 从fromindex开始查找子串"xx"的索引，若没有返回-1
         System.out.println(str.indexOf("ws",3));
 
         //8.StringBuilder ans=new StringBuilder() ,ans.append("xx")

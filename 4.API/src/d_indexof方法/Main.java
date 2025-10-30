@@ -1,4 +1,4 @@
-package g_indexof方法;
+package d_indexof方法;
 
 public class Main {
     public static void main(String[] args) {
