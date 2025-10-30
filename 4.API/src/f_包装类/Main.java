@@ -13,6 +13,7 @@ public class Main {
 
         int max=Integer.MAX_VALUE;
         int min=Integer.MIN_VALUE;
+        //int占4个字节(byte),一个byte占8位(bit)共32位,数据范围位-2*10^32/2~2*10^32/2,大概在-20亿~20亿.
         System.out.println(max);
         System.out.println(min);
     }
