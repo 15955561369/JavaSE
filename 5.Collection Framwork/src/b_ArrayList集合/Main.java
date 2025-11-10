@@ -1,7 +1,15 @@
 package b_ArrayList集合;
 
 import java.util.*;
-
+/*
+* 总结:
+* 1.add()添加元素
+* 2.set()修改元素
+* 3.remove()删除元素
+* 4.get()获取元素
+* 5.size()获取大小
+* 6.toArray(数组)转数组
+* */
 public class Main {
     public static void main(String[] args) {
         /*
@@ -27,6 +35,10 @@ public class Main {
         arrayList.remove(1);
         for(int i=0;i<arrayList.size();i++){
             System.out.println(arrayList.get(i));
+
+        // toArray(*)转为数组
+        String[] str=arrayList.toArray(new String[arrayList.size()]);
+        System.out.println(Arrays.toString(str));
         }
     }
 }
