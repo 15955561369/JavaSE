@@ -28,5 +28,8 @@ public class main {
         for(Map.Entry<String,Integer> str:entrySet){
             System.out.println(str+" "+str.getKey()+" "+str.getValue());
         }
+        for(String key:keys){
+            System.out.println(hashMap.get(key));
+        }//方式2
     }
 }
