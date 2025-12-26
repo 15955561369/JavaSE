@@ -23,5 +23,6 @@ public class Main{
     public static void main(String[] args) {
         new Stu();//类加载
         new Stu();
+
     }
 }
