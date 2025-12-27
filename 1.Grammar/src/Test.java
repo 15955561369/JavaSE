@@ -35,6 +35,5 @@ public class Test {
         }
         System.out.println(7/2);
 
-
     }
 }
