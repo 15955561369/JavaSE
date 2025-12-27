@@ -22,7 +22,6 @@ public class Main {
                 System.out.println("密码输入错误，登录失败"+"。剩余"+(pwdCount-i)+"次");
             }
         }
-
     }
     //main为静态方法，静态方法中只能调用静态方法，除非创建对象
     private static boolean login(){
