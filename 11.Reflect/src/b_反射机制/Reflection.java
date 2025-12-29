@@ -47,7 +47,7 @@ public class Reflection {
         Object o2=constructor.newInstance("zzy",23,"shanxi");
         System.out.println(o2);
 
-        //二、反射机制给对象属性赋值
+        //二、反射机制给动态对象属性赋值
         Class<?> aClass3 = Class.forName("b_反射机制.User");
         Field[] fields=aClass3.getDeclaredFields();//获取所有的属性字段，返回列表
         for(Field field:fields){
@@ -65,7 +65,7 @@ public class Reflection {
         userAddressField.set(o3,"西安");//再赋值
         System.out.println(o3);
 
-        //三、反射机制调用方法
+        //三、反射机制调用动态对象的方法
         Class<?> aClass4 = Class.forName("b_反射机制.User");
         Method[] methods=aClass4.getDeclaredMethods();//获取所有的方法，返回列表
         for(Method method:methods){
