@@ -27,4 +27,5 @@ public class Main {
         Map<String,String> map = new HashMap<>();
         Map<String,String> map2 = new Hashtable<>();
     }
+
 }

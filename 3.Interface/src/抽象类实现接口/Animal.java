@@ -26,4 +26,5 @@ public abstract class Animal implements JumpInterface{
         return age;
     }
 
+
 }
