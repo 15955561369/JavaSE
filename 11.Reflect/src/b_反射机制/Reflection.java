@@ -81,6 +81,5 @@ public class Reflection {
         show2Method.setAccessible(true);
         String result2= show2Method.invoke(o4,"张子阳").toString();
         System.out.println(result2);
-
     }
 }
