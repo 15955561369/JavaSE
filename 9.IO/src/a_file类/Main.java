@@ -20,11 +20,5 @@ public class Main {
         File file3 = new File("C:\\Users\\ZY\\");
         File file4 = new File(file3,"Desktop");
 
-        //创建文件
-        File file = new File("C:\\Users\\ZY\\Desktop\\IO\\Test.java");
-        System.out.println(file.createNewFile());
-        //创建文件夹/目录
-        File file_ = new File("C:\\Users\\ZY\\Desktop\\IO\\io\\io\\");
-        System.out.println(file_.mkdirs());
     }
 }
