@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class Main {
+public class Demo {
     public static void main(String[] args) throws IOException {
 
         //创建文件

@@ -2,7 +2,7 @@ package d_递归访问文件夹内所有文件;
 
 import java.io.File;
 
-public class Main {
+public class Demo {
     public static void main(String[] args) {
 
         File ioTest = new File("IOTest");//相对路径

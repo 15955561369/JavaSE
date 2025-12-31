@@ -3,7 +3,7 @@ package c_删除多个文件;
 import java.io.File;
 import java.io.IOException;
 
-public class Main {
+public class Demo {
     public static void main(String[] args) throws IOException {
 
         File file = new File("IoTest");

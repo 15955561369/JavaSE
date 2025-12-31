@@ -8,7 +8,7 @@ package a_file类;
  * 2)mkdirs() 创建文件夹/目录
  */
 import java.io.*;
-public class Main {
+public class Demo {
     public static void main(String[] args) throws IOException{
 
         //File()创建对象

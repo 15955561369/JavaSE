@@ -1,4 +1,10 @@
 package e_io流;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
 /*
 * IO流:
 * IO 指输入输出
@@ -10,5 +16,8 @@ package e_io流;
 * 1)字符流:主要用来传输 文本 等文件
 * 2)字节流(万能流):主要用来传输 图片、视频 等文件
 * */
-public class Main {
+public class Demo {
+    public static void main(String[] args) {
+
+    }
 }
