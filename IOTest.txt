@@ -1,1 +1,2 @@
-aaabcdbc
+abcdefg
+higk
