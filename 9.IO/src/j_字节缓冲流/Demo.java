@@ -10,7 +10,8 @@ import java.io.*;
 public class Demo {
     public static void main(String[] args) throws IOException {
         FileInputStream inputStream = new FileInputStream("IOTest.txt");
-        BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);//输入缓冲流
+        //输入缓冲流，传递字节流对象
+        BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
         byte[] buffer = new byte[8192];
         int len;
         while((len=bufferedInputStream.read(buffer))!=-1){//读取IOTest中的数据
@@ -18,7 +19,8 @@ public class Demo {
         }
 
         FileOutputStream outputStream = new FileOutputStream("IOTest.txt",true);//追加写
-        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);//输出缓冲流
+        //输出缓冲流，传递字节流对象
+        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
         bufferedOutputStream.write("zzy张子阳\nzzy\n".getBytes());//写入IOTest.txt数据
         bufferedInputStream.close();
         bufferedOutputStream.close();
