@@ -36,5 +36,26 @@ public class Main {
         int []num2=Arrays.copyOfRange(nums,1,3);
         System.out.println(Arrays.toString(num2));
 
+        //10.手写比较器Comparator进行排序，按照自定义的规则一次性直接排好
+        String[] new_str={"Aa","AA","a","AB"};
+        Arrays.sort(new_str,new Comparator<String>(){
+           @Override
+           public int compare(String o1, String o2) {
+               //自定义的规则
+               //规则1：长度短的放前面
+               if(o1.length()<o2.length())
+                   return -1;
+               if(o1.length()>o2.length())
+                   return 1;
+               /*
+               说明：返回值若小于0，则表示 o1 o2
+                         若等于0，则表示顺序不变
+                         若大于0，则表示o2 o1
+               */
+               //规则2：若长度相等，则比较字典序
+               return o1.compareTo(o2);//compareTo()能够直接比较字典序，然后返回正负值。
+           }
+        });
+        System.out.println(Arrays.toString(new_str));
     }
 }

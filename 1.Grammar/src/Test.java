@@ -1,39 +1,47 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.io.*;
 
 public class Test {
+    static int[] graph={1,0,0,0,1,0,1,0,2,1};
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s=sc.nextLine();
-        char []ans=new char [s.length()];
-        Arrays.fill(ans,'中');
-        char []s_=s.toCharArray();
-        //先存非字母
-        for(int i=0;i<s_.length;i++){
-            int a=(int)s_[i];
-            if(a>122 || a<65 || (a>90&&a<97)){
-                ans[i]=s_[i];
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        scan.nextLine();
+        String strs=scan.nextLine();
+        String[] numsStr=strs.split(" ");
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n-i-1;j++){
+                String[] temp=sort(numsStr[j],numsStr[j+1]).split(" ");
+                numsStr[j]=temp[1];
+                numsStr[j+1]=temp[0];
             }
         }
-        int j=0;
-        for(int ascii=65;ascii<=90;ascii++){
-            for(int i=0;i<s.length();i++){
-                //获取当前ascii码
-                int asc=(int)s.charAt(i);
-                //如果是字母
-                if((asc>=65 && asc<=90) || (asc>=97 && asc<=122)){
-                    if(asc==ascii || asc==ascii+32){
-                        while(ans[j] != '中') j++;
-                        ans[j++]=s.charAt(i);
-                    }
-                }
-            }
-
+        System.out.println(Arrays.toString(numsStr));
+    }
+    //返回封闭图形数
+    public static int circle(String strNum){
+        int ans=0;
+        for(char ch:strNum.toCharArray()){
+            ans+=graph[(int)ch-48];
         }
-        for(int i=0;i<s_.length;i++){
-            System.out.print(ans[i]);
+        return ans;
+    }
+    //输入两个数，返回排序后的数，大的在前
+    public static String sort(String num1,String num2){
+        if(circle(num1)>circle(num2)){
+            return num1+" "+num2;
+        }else if(circle(num1)<circle(num2)){
+            return num2+" "+num1;
+        }else if(circle(num1)==circle(num2)){
+            if(Integer.parseInt(num1)>Integer.parseInt(num2)){
+                return num1+" "+num2;
+            }else if(Integer.parseInt(num1)<Integer.parseInt(num2)){
+                return num2+" "+num1;
+            }else if(Integer.parseInt(num1)==Integer.parseInt(num2))
+                return num1+" "+num2;
         }
-        System.out.println(7/2);
-
+        return "";
     }
 }
