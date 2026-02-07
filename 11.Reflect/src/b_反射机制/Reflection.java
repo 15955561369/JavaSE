@@ -31,7 +31,7 @@ public class Reflection {
         System.out.println(User.class);
         //2.new 出对象,调用getClass()方法 (不必要,同理)
         User user = new User();
-        Class<?> aCLass= user.getClass(); // <?>表示泛型通配符，未知其数据类型，所以也不能添加任何的具体对象，只能添加null。比如ArrayList<?> stuList= new ArrayList<>()就只能添加null
+        Class<?> aCLass= user.getClass(); // <?>表示泛型通配符，未知其数据类型，所以也不能手动添加任何的具体对象，只能添加null。比如ArrayList<?> stuList= new ArrayList<>()就只能添加null
         System.out.println(aCLass);
         //3.Class.forName("包名.类名")   最常用
         Class<?> aClass1 = Class.forName("b_反射机制.User");
