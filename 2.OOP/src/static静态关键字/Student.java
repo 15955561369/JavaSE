@@ -17,6 +17,7 @@ public class Student {
     public static void a1(){
         System.out.println("静态方法");
     }
+
     //在静态方法中只能访问静态属性和静态方法，无法访问非静态属性和方法,除非创建出对象
     public static void a2(){
         a1();

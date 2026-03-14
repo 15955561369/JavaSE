@@ -4,6 +4,15 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 
+/*
+* 1.sort(数组，比较器)排序
+* 2.binarySearch()二分查找索引，必须先排序
+* 3.Arrays.stream(数组).max().getAsInt() 获取最值
+* 4.Arrays.toString(数组) 转为字符串
+* 5.Arrays.fill(数组,值) 填充
+* 6.Arrays.equals(数组1,数组2) 比较数组元素
+* 7.Arrays.copyOfRange(数组,start,end) 拷贝数组,左闭右开
+* */
 public class Main {
     public static void main(String[] args) {
         String []str={"AaA","AaA","AAA","BBCC"};

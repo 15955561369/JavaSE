@@ -29,6 +29,11 @@ public class Main {
         //8.StringBuilder ans=new StringBuilder() ,ans.append("xx")
         StringBuilder ans=new StringBuilder();
         ans.append("zzy");
+        //反转
+        ans.reverse();
+        System.out.println(ans.toString());
+        //删除指定范围
+        ans.delete(ans.length()-3,ans.length());
         //9.ans.toString() StringBuilder需要转换成String
         System.out.println(ans.toString());
 

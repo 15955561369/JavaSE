@@ -9,6 +9,7 @@ import java.util.*;
 * 4.get()获取元素
 * 5.size()获取大小
 * 6.toArray(数组)转数组
+* 7.sort(比较器)排序
 * */
 public class Main {
     public static void main(String[] args) {
@@ -31,14 +32,18 @@ public class Main {
         System.out.println("----------------------------------------------");
         //set()方法修改数据
         arrayList.set(0,"zzy1");
+        //get()方法返回指定索引
+        arrayList.get(1);
         //remove()方法删除数据
         arrayList.remove(1);
         for(int i=0;i<arrayList.size();i++){
             System.out.println(arrayList.get(i));
-
         // toArray(*)转为数组
         String[] str=arrayList.toArray(new String[arrayList.size()]);
         System.out.println(Arrays.toString(str));
         }
+        // sort排序，也可自定义比较器Comparator
+        arrayList.sort(Comparator.naturalOrder());
+        System.out.println(arrayList);
     }
 }

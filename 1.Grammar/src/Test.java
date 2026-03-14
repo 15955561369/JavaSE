@@ -4,44 +4,35 @@ import java.util.Arrays;
 import java.io.*;
 
 public class Test {
-    static int[] graph={1,0,0,0,1,0,1,0,2,1};
+    static int[] days={31,28,31,30,31,30,31,31,30,31,30,31};
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int n=scan.nextInt();
-        scan.nextLine();
-        String strs=scan.nextLine();
-        String[] numsStr=strs.split(" ");
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n-i-1;j++){
-                String[] temp=sort(numsStr[j],numsStr[j+1]).split(" ");
-                numsStr[j]=temp[1];
-                numsStr[j+1]=temp[0];
+        int ans=0;
+        for(int year=1900;year<=9999;year++){
+            int sum1=0;
+            for(char ch:String.valueOf(year).toCharArray()){//求年的和
+                sum1+=Integer.parseInt(String.valueOf(ch));
+            }
+            if(year%4==0 && year%100!=0)
+                days[1]=29;//闰年
+            for(int month=1;month<=12;month++){
+                for(int day=1;day<=days[month-1];day++){
+                    if(sum1==sum(month,day)){
+                        System.out.println(year+" "+month+" "+day);
+                        ans++;
+                    }
+
+                }
             }
         }
-        System.out.println(Arrays.toString(numsStr));
+        System.out.println(ans);
     }
-    //返回封闭图形数
-    public static int circle(String strNum){
-        int ans=0;
-        for(char ch:strNum.toCharArray()){
-            ans+=graph[(int)ch-48];
+    //求月+日的各位数字之和
+    public static int sum(int month,int day){
+        int res=0;
+        String nums=String.valueOf(month)+String.valueOf(day);
+        for(char num:nums.toCharArray()){
+            res+=Integer.parseInt(String.valueOf(num));
         }
-        return ans;
-    }
-    //输入两个数，返回排序后的数，大的在前
-    public static String sort(String num1,String num2){
-        if(circle(num1)>circle(num2)){
-            return num1+" "+num2;
-        }else if(circle(num1)<circle(num2)){
-            return num2+" "+num1;
-        }else if(circle(num1)==circle(num2)){
-            if(Integer.parseInt(num1)>Integer.parseInt(num2)){
-                return num1+" "+num2;
-            }else if(Integer.parseInt(num1)<Integer.parseInt(num2)){
-                return num2+" "+num1;
-            }else if(Integer.parseInt(num1)==Integer.parseInt(num2))
-                return num1+" "+num2;
-        }
-        return "";
+        return res;
     }
 }

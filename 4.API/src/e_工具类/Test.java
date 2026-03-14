@@ -9,7 +9,9 @@ package e_工具类;
 import java.util.Arrays;
 
 //自定义工具类Test
-public class Test {
+public final class Test {
+    //最好将构造方法私有化并加上final关键字，防止被实例化和继承，这样静态属性和静态方法就只能通过 类名. 进行访问了
+    //如果没有将构造方法私有化也没有影响，只要是静态方法，就可以通过类名. 进行访问。
 
     //private修饰无参构造方法
      private Test(){
