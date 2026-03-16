@@ -27,7 +27,7 @@ public class Main {
          * 中间操作：
          * 1.转换 map(lambda表达式)
          * 2.过滤 filter(lambda表达式)
-         *
+         * 3.跳过 skip(个数)
          * ...
          * */
         List<Integer> list1 = list.stream().map(n -> n + 1).collect(Collectors.toList());
